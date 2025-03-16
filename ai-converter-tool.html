@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AI-powered tool for text-to-video, text-to-image, and image-to-video conversion. Create stunning visuals and videos effortlessly.">
+    <meta name="keywords" content="AI tool, text to video, text to image, image to video, AI converter, video generator, image generator">
+    <meta name="author" content="Your Company Name">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com">
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="AI Text & Image to Video Converter">
+    <meta property="og:description" content="AI-powered tool for text-to-video, text-to-image, and image-to-video conversion. Create stunning visuals and videos effortlessly.">
+    <meta property="og:image" content="https://yourwebsite.com/thumbnail.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Text & Image to Video Converter">
+    <meta name="twitter:description" content="AI-powered tool for text-to-video, text-to-image, and image-to-video conversion. Create stunning visuals and videos effortlessly.">
+    <meta name="twitter:image" content="https://yourwebsite.com/thumbnail.jpg">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "AI Text & Image to Video Converter",
+            "description": "AI-powered tool for text-to-video, text-to-image, and image-to-video conversion. Create stunning visuals and videos effortlessly.",
+            "url": "https://yourwebsite.com",
+            "applicationCategory": "Multimedia",
+            "operatingSystem": "Web",
+            "screenshot": "https://yourwebsite.com/thumbnail.jpg"
+        }
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_AD_UNIT_ID" crossorigin="anonymous"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Styles -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .ad-banner {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .ad-banner ins {
+            display: inline-block;
+            width: 728px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .tool-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tool-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .tool-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .tool-section h2 i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .tool-section input, .tool-section textarea, .tool-section button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .tool-section input::placeholder, .tool-section textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .tool-section input:focus, .tool-section textarea:focus {
+            background: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+
+        .tool-section button {
+            background: #ff6f61;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .tool-section button:hover {
+            background: #ff4a3d;
+        }
+
+        .output-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .output-section img, .output-section video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tool-section, .ad-banner {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .tool-section {
+                padding: 15px;
+            }
+
+            .ad-banner ins {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>AI Text & Image to Video Converter</h1>
+    </header>
+    <div class="container">
+        <!-- Ad Banner -->
+        <div class="ad-banner">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="YOUR_ADSENSE_AD_UNIT_ID"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Text to Image Section -->
+        <div class="tool-section">
+            <h2><i class="fas fa-image"></i>Text to Image</h2>
+            <textarea id="text-to-image-input" placeholder="Enter text to generate an image..."></textarea>
+            <button onclick="generateImage()">Generate Image</button>
+            <div class="output-section" id="text-to-image-output">
+                <!-- Generated image will appear here -->
+            </div>
+        </div>
+
+        <!-- Text to Video Section -->
+        <div class="tool-section">
+            <h2><i class="fas fa-video"></i>Text to Video</h2>
+            <textarea id="text-to-video-input" placeholder="Enter text to generate a video..."></textarea>
+            <button onclick="generateVideo()">Generate Video</button>
+            <div class="output-section" id="text-to-video-output">
+                <!-- Generated video will appear here -->
+            </div>
+        </div>
+
+        <!-- Image to Video Section -->
+        <div class="tool-section">
+            <h2><i class="fas fa-file-image"></i>Image to Video</h2>
+            <input type="file" id="image-to-video-input" accept="image/*">
+            <button onclick="convertImageToVideo()">Convert Image to Video</button>
+            <div class="output-section" id="image-to-video-output">
+                <!-- Generated video will appear here -->
+            </div>
+        </div>
+
+        <!-- Ad Banner -->
+        <div class="ad-banner">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="YOUR_ADSENSE_AD_UNIT_ID"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <script>
+        // Simulate API call for text-to-image
+        function generateImage() {
+            const text = document.getElementById('text-to-image-input').value;
+            const outputSection = document.getElementById('text-to-image-output');
+            outputSection.innerHTML = `<p>Generating image for: "${text}"...</p>`;
+
+            // Simulate API call with a delay
+            simulateAPICall()
+                .then(() => {
+                    outputSection.innerHTML = `<img src="https://via.placeholder.com/500x300.png?text=Generated+Image" alt="Generated Image from Text">`;
+                })
+                .catch(() => {
+                    outputSection.innerHTML = `<p>Failed to generate image. Please try again.</p>`;
+                });
+        }
+
+        // Simulate API call for text-to-video
+        function generateVideo() {
+            const text = document.getElementById('text-to-video-input').value;
+            const outputSection = document.getElementById('text-to-video-output');
+            outputSection.innerHTML = `<p>Generating video for: "${text}"...</p>`;
+
+            // Simulate API call with a delay
+            simulateAPICall()
+                .then(() => {
+                    outputSection.innerHTML = `<video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>`;
+                })
+                .catch(() => {
+                    outputSection.innerHTML = `<p>Failed to generate video. Please try again.</p>`;
+                });
+        }
+
+        // Simulate API call for image-to-video
+        function convertImageToVideo() {
+            const file = document.getElementById('image-to-video-input').files[0];
+            const outputSection = document.getElementById('image-to-video-output');
+            outputSection.innerHTML = `<p>Converting image to video...</p>`;
+
+            // Simulate API call with a delay
+            simulateAPICall()
+                .then(() => {
+                    outputSection.innerHTML = `<video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>`;
+                })
+                .catch(() => {
+                    outputSection.innerHTML = `<p>Failed to convert image to video. Please try again.</p>`;
+                });
+        }
+
+        // Simulate API call with a delay
+        function simulateAPICall() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    // Simulate success 90% of the time
+                    if (Math.random() < 0.9) {
+                        resolve();
+                    } else {
+                        reject();
+                    }
+                }, 2000); // 2-second delay
+            });
+        }
+    </script>
+</body>
+</html>
